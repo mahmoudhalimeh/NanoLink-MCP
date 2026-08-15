@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { createRequire } from "node:module";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -7,7 +8,12 @@ import { LinkondaClient, LinkondaError } from "./api.js";
 const apiKey = process.env.LINKONDA_API_KEY?.trim() || undefined;
 const client = new LinkondaClient(apiKey, process.env.LINKONDA_API_BASE_URL);
 
-const server = new McpServer({ name: "linkonda", version: "0.1.0" });
+// Read the version rather than hardcoding it: a literal here silently goes stale on every
+// release, so clients get told a version that no longer matches the package they installed.
+// `../package.json` resolves the same from src/ under tsx and from dist/ once built.
+const { version } = createRequire(import.meta.url)("../package.json") as { version: string };
+
+const server = new McpServer({ name: "linkonda", version });
 
 type ToolResult = { content: { type: "text"; text: string }[]; isError?: boolean };
 
