@@ -1,5 +1,5 @@
 {
-  "name": "@linkonda/mcp",
+  "name": "@verano/linkonda-mcp",
   "version": "0.1.0",
   "description": "MCP server for Linkonda — create and manage short links and QR-ready URLs without per-visitor tracking.",
   "keywords": [
