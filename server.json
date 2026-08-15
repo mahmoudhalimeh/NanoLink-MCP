@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.linkonda/mcp",
+  "description": "Create and manage Linkonda short links and QR codes, with no per-visitor tracking.",
+  "repository": {
+    "url": "https://github.com/mahmoudhalimeh/NanoLink-MCP",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@veranoapp/linkonda-mcp",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "LINKONDA_API_KEY",
+          "description": "Linkonda API key (paid plans). Optional \u2014 without it the server still shortens URLs anonymously, but links expire and account tools are unavailable.",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "LINKONDA_API_BASE_URL",
+          "description": "Override the API host. Defaults to https://api.linkonda.com.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}

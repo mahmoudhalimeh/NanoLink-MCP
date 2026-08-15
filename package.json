@@ -1,7 +1,8 @@
 {
   "name": "@veranoapp/linkonda-mcp",
-  "version": "0.1.0",
-  "description": "MCP server for Linkonda — create and manage short links and QR-ready URLs without per-visitor tracking.",
+  "version": "0.1.1",
+  "mcpName": "com.linkonda/mcp",
+  "description": "MCP server for Linkonda \u2014 create and manage short links and QR-ready URLs without per-visitor tracking.",
   "keywords": [
     "mcp",
     "modelcontextprotocol",
@@ -35,5 +36,9 @@
   "devDependencies": {
     "@types/node": "^22.20.1",
     "typescript": "~5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahmoudhalimeh/NanoLink-MCP.git"
   }
 }
