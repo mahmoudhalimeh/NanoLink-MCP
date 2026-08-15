@@ -26,7 +26,7 @@ Add to your MCP client config (Claude Desktop: `claude_desktop_config.json`; Cla
   "mcpServers": {
     "linkonda": {
       "command": "npx",
-      "args": ["-y", "@verano/linkonda-mcp"]
+      "args": ["-y", "@veranoapp/linkonda-mcp"]
     }
   }
 }
@@ -39,7 +39,7 @@ To use an API key, add it to the same entry:
   "mcpServers": {
     "linkonda": {
       "command": "npx",
-      "args": ["-y", "@verano/linkonda-mcp"],
+      "args": ["-y", "@veranoapp/linkonda-mcp"],
       "env": { "LINKONDA_API_KEY": "lk_your_key_here" }
     }
   }
