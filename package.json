@@ -1,0 +1,38 @@
+{
+  "name": "@linkonda/mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Linkonda — create and manage short links and QR-ready URLs without per-visitor tracking.",
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "url-shortener",
+    "short-links",
+    "linkonda",
+    "privacy"
+  ],
+  "homepage": "https://linkonda.com/solutions/url-shortener-api",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "linkonda-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "typescript": "~5.9.3"
+  }
+}
