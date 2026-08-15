@@ -1,6 +1,6 @@
 {
   "name": "@veranoapp/linkonda-mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "mcpName": "com.linkonda/mcp",
   "description": "MCP server for Linkonda \u2014 create and manage short links and QR-ready URLs without per-visitor tracking.",
   "keywords": [
